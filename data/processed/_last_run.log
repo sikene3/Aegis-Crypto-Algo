@@ -1,0 +1,22 @@
+[2026-06-16 16:17:38] INFO - Loading raw data from D:\New folder (2)\Bitcoin\data\raw\btcusd_1-min_data.csv
+[2026-06-16 16:17:41] INFO - Raw data loaded with shape (7603230, 6) (memory: 212.89 MB)
+[2026-06-16 16:17:41] INFO - Reindexed to 1min grid: original rows=7603230, new rows=7603230, gaps filled=0
+[2026-06-16 16:18:16] INFO - Cleaned data written to D:\New folder (2)\Bitcoin\data\processed\btcusd_cleaned.csv (593.50 MB)
+[1/4] Raw data shape:                (7603230, 6)
+[2/4] After reindex to 1-min grid:   (7603230, 5)
+      Time gaps successfully filled: 0
+[3/4] After imputation:              (7603230, 5)
+[4/4] Saved cleaned CSV -> D:\New folder (2)\Bitcoin\data\processed\btcusd_cleaned.csv
+
+--- Cleaned dataset summary ---
+Range: 2012-01-01 00:01:00  ->  2026-06-16 00:30:00
+Rows : 7,603,230
+               Open          High           Low         Close        Volume
+count  7.603230e+06  7.603230e+06  7.603230e+06  7.603230e+06  7.603230e+06
+mean   2.335482e+04  2.336298e+04  2.334649e+04  2.335484e+04  5.001300e+00
+std    3.128858e+04  3.129697e+04  3.128013e+04  3.128861e+04  2.167550e+01
+min    3.800000e+00  3.800000e+00  3.800000e+00  3.800000e+00  0.000000e+00
+25%    4.550000e+02  4.550900e+02  4.549400e+02  4.550000e+02  2.140000e-02
+50%    7.960000e+03  7.965240e+03  7.954800e+03  7.960000e+03  4.500000e-01
+75%    3.778614e+04  3.779905e+04  3.777123e+04  3.778642e+04  2.804800e+00
+max    1.262020e+05  1.262720e+05  1.261580e+05  1.262020e+05  5.853852e+03

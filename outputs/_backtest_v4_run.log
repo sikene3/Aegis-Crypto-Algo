@@ -1,0 +1,31 @@
+[2026-06-16 17:47:13] INFO - Loading 4H features from D:\New folder (2)\Bitcoin\data\processed\btcusd_features_4h.csv
+[2026-06-16 17:47:13] INFO - Features loaded: shape=(31482, 15), memory=2.39 MB
+[2026-06-16 17:47:13] INFO - Test slice: (4723, 15)  [2024-04-20 00:00:00 .. 2026-06-16 00:00:00]
+[2026-06-16 17:47:13] INFO - Loading LightGBM booster from D:\New folder (2)\Bitcoin\outputs\lgbm_model_4h.txt
+[2026-06-16 17:47:13] INFO - Booster best_iter=25, n_features=9
+[2026-06-16 17:47:14] INFO - Saved equity curve -> D:\New folder (2)\Bitcoin\outputs\portfolio_growth_v4_risk_managed.png
+[1/5] Test slice: (4723, 15)  [2024-04-20 00:00:00 .. 2026-06-16 00:00:00]
+[2/5] P(up) > 0.55  ->  439 candidate bars  (of 4,723)
+        P(up) range on test: min=0.4179, max=0.6031, mean=0.4864
+[3/5] Trade log rows: 329
+        ret_net -> mean=-0.001540, std=0.012178, min=-0.022000, max=0.038000
+        exit reasons -> TP=5, SL=41, TIME=283
+        avg p_up at entry = 0.5757
+
+=== Backtest V4 (4H, Risk-Managed, Out-of-Sample Test) ===
+  Threshold         : P(up) > 0.55
+  Position sizing   : 10% of equity per trade (90% in cash)
+  Stop Loss         : 2.0% below entry
+  Take Profit       : 4.0% above entry
+  Time exit         : 1 bar (4 hours)
+  Round-trip fee    : 0.20%
+  Initial capital   : $10,000.00
+  Final equity      : $9,503.68
+  ROI               : -4.96 %
+  Max drawdown      : -6.01 %
+  Annualized Sharpe : -1.55
+  Total trades      : 329
+  Win rate          : 44.98 %
+  Avg trade ret     : -0.1540 %
+  Exit distribution : TP=5  SL=41  TIME=283
+[5/5] Saved equity plot -> D:\New folder (2)\Bitcoin\outputs\portfolio_growth_v4_risk_managed.png

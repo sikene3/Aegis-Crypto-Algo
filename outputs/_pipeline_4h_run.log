@@ -1,0 +1,48 @@
+[2026-06-16 17:16:54] INFO - [1/8] Loading 1m cleaned data from D:\New folder (2)\Bitcoin\data\processed\btcusd_cleaned.csv
+[2026-06-16 17:17:01] INFO - 1m shape=(7603230, 5), memory=212.89 MB
+[2026-06-16 17:17:02] INFO - 4H shape=(31681, 5)  [2012-01-01 00:00:00 .. 2026-06-16 00:00:00]
+[2026-06-16 17:17:02] INFO - [2/8] Engineering 4H features
+[2026-06-16 17:17:02] INFO - Features built: 31681 -> 31482 rows (dropped 199 warm-up/target NaNs)
+[2026-06-16 17:17:02] INFO - Wrote 4H features -> D:\New folder (2)\Bitcoin\data\processed\btcusd_features_4h.csv (5.70 MB)
+[2026-06-16 17:17:02] INFO - Split: train=(22037, 9)  val=(4722, 9)  test=(4723, 9)
+[2026-06-16 17:17:02] INFO - [3/8] Training LightGBM with early stopping (patience=100)
+[2026-06-16 17:17:02] INFO - Training done in 0.1s. Best iter=25, best val_logloss=0.689977
+[2026-06-16 17:17:02] INFO - Saved model -> D:\New folder (2)\Bitcoin\outputs\lgbm_model_4h.txt
+[2026-06-16 17:17:02] INFO - Saved equity curve -> D:\New folder (2)\Bitcoin\outputs\portfolio_growth_4h.png
+[100]	train's binary_logloss: 0.654364	val's binary_logloss: 0.692849
+[4/8] Best iter: 25
+
+=== Test Classification Report (4H, threshold=0.5) ===
+              precision    recall  f1-score   support
+
+           0     0.4994    0.6901    0.5795      2317
+           1     0.5279    0.3337    0.4090      2406
+
+    accuracy                         0.5086      4723
+   macro avg     0.5137    0.5119    0.4942      4723
+weighted avg     0.5139    0.5086    0.4926      4723
+
+Confusion matrix:
+          pred_0  pred_1
+actual_0    1599     718
+actual_1    1603     803
+
+[5/8] Test period: 4,723 bars  [2024-04-20 00:00:00 .. 2026-06-16 00:00:00]
+        P(up) > 0.55  -> 439 candidate bars  (of 4,723)
+        P(up) range on test: min=0.4179, max=0.6031, mean=0.4864
+[6/8] Trade log rows: 329
+        mean ret_net = -0.001612, std = 0.013567, min = -0.075080, max = 0.061903
+        avg p_up at entry = 0.5757
+
+=== Backtest V3 (4H, Out-of-Sample Test) ===
+  Threshold         : P(up) > 0.55
+  Position sizing   : 100% of equity per trade
+  Initial capital   : $10,000.00
+  Final equity      : $5,706.25
+  ROI               : -42.94 %
+  Max drawdown      : -43.86 %
+  Annualized Sharpe : -1.46
+  Total trades      : 329
+  Win rate          : 45.90 %
+  Avg trade ret     : -0.1612 %
+[8/8] Saved equity plot -> D:\New folder (2)\Bitcoin\outputs\portfolio_growth_4h.png

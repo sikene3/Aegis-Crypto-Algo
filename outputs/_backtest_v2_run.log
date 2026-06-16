@@ -1,0 +1,31 @@
+[2026-06-16 17:05:16] INFO - Loading features from D:\New folder (2)\Bitcoin\data\processed\btcusd_features.csv
+[2026-06-16 17:05:29] INFO - Features loaded: shape=(7599489, 18), memory=790.35 MB
+[2026-06-16 17:05:29] INFO - Test slice: (1139924, 18)  [2024-04-15 09:47:00 .. 2026-06-16 00:30:00]
+[2026-06-16 17:05:29] INFO - Loading LightGBM booster from D:\New folder (2)\Bitcoin\outputs\lgbm_model.txt
+[2026-06-16 17:05:29] INFO - Booster best_iter=30, n_features=12
+[2026-06-16 17:05:30] WARNING - PROB_THRESHOLD=0.80 yielded 0 signals; auto-relaxing to p99(P_up)=0.5501
+[2026-06-16 17:05:30] INFO - Saved equity curve -> D:\New folder (2)\Bitcoin\outputs\portfolio_growth_v2.png
+[1/5] Test slice: (1139924, 18)  [2024-04-15 09:47:00 .. 2026-06-16 00:30:00]
+[2/5] Probability distribution on test:
+      mean P(up)    = 0.4873, min=0.4275, max=0.5605
+      P(up) > 0.50            -> 404,077 signals  (V1 baseline)
+      P(up) > 0.80            -> 0 signals  (user threshold)
+      P(up) > 0.5501 (active)  -> 11,315 signals  (p99 fallback)
+[3/5] Trade log rows: 5,032
+      trade ret (net) -> mean=-0.001926, std=0.004190, min=-0.046006, max=0.033716
+      avg p_up at entry = 0.5538
+
+=== Backtest Metrics V2 (Out-of-Sample Test) ===
+  Active threshold  : P(up) > 0.5501  (p99 fallback)
+  Position sizing   : 1% of equity per trade
+  Initial capital   : $10,000.00
+  Final equity      : $10,000.00
+  ROI               : +0.00 %
+  Max drawdown      : 0.00 %
+  Annualized Sharpe : nan
+  Trades executed   : 5,032
+  Win rate          : 26.39 %
+  Avg trade ret     : -0.1926 %
+  Avg winner        : +0.2442 %
+  Avg loser         : -0.3493 %
+[5/5] Saved equity plot -> D:\New folder (2)\Bitcoin\outputs\portfolio_growth_v2.png

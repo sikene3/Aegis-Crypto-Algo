@@ -1,0 +1,10 @@
+﻿Metric,V3 (base),V4 (risk-managed)
+Final Equity ($),"5,706.25","9,503.68"
+ROI (%),-42.94,-4.96
+Max Drawdown (%),-43.86,-6.01
+Annualized Sharpe,-1.46,-1.55
+Win Rate (%),45.90,44.98
+Total Trades,329,329
+Position Sizing,100% of equity per trade,10% of equity per trade (90% in cash)
+Stop Loss,none,2.0% below entry
+Take Profit,none,4.0% above entry

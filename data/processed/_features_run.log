@@ -1,0 +1,10 @@
+[2026-06-16 16:24:12] INFO - Loading cleaned data from D:\New folder (2)\Bitcoin\data\processed\btcusd_cleaned.csv
+[2026-06-16 16:24:19] INFO - Cleaned data loaded with shape (7603230, 5) (memory: 212.89 MB)
+[2026-06-16 16:26:18] INFO - Feature dataset written to D:\New folder (2)\Bitcoin\data\processed\btcusd_features.csv (1615.06 MB)
+[1/5] Loaded cleaned data shape:     (7603230, 5)
+[2/5] After feature engineering:     (7603230, 18)  (with NaNs from rolling/shift)
+[3/5] After dropna():                (7599489, 18)  (dropped 3,741 rows)
+[4/5] target_15m class balance:
+        class=0: 4,012,213  (52.8%)
+        class=1: 3,587,276  (47.2%)
+[5/5] Saved engineered features -> D:\New folder (2)\Bitcoin\data\processed\btcusd_features.csv

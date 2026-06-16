@@ -1,0 +1,21 @@
+[2026-06-16 16:41:39] INFO - Loading features from D:\New folder (2)\Bitcoin\data\processed\btcusd_features.csv
+[2026-06-16 16:41:54] INFO - Features loaded: shape=(7599489, 18), memory=790.35 MB
+[2026-06-16 16:41:54] INFO - Test slice: (1139924, 18)  [2024-04-15 09:47:00 .. 2026-06-16 00:30:00]
+[2026-06-16 16:41:54] INFO - Loading LightGBM booster from D:\New folder (2)\Bitcoin\outputs\lgbm_model.txt
+[2026-06-16 16:41:54] INFO - Booster best_iter=30, n_features=12
+[2026-06-16 16:41:55] INFO - Saved equity curve -> D:\New folder (2)\Bitcoin\outputs\portfolio_growth.png
+[1/4] Test slice: (1139924, 18)  [2024-04-15 09:47:00 .. 2026-06-16 00:30:00]
+[2/4] Test signals: longs=404,077  flat=735,847
+      Trade log rows: 43,848
+      Trade ret (net) -> mean=-0.001990, std=0.002634, min=-0.044371, max=0.034187
+
+=== Backtest Metrics (Out-of-Sample Test) ===
+  Initial capital : $10,000.00
+  Final equity    : $0.00
+  ROI             : -100.00 %
+  Max drawdown    : -100.00 %
+  Annualized Sharpe: -57.58
+  Trades executed : 43,848
+  Win rate        : 14.42 %
+  Avg trade ret   : -0.1990 %
+[4/4] Saved equity plot -> D:\New folder (2)\Bitcoin\outputs\portfolio_growth.png

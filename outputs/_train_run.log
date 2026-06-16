@@ -1,0 +1,26 @@
+[2026-06-16 16:32:42] INFO - Loading features from D:\New folder (2)\Bitcoin\data\processed\btcusd_features.csv
+[2026-06-16 16:32:56] INFO - Features loaded: shape=(7599489, 18), memory=790.35 MB
+[2026-06-16 16:32:56] INFO - Training LightGBM with early stopping (patience=50)...
+[2026-06-16 16:33:08] INFO - Training done in 11.7s. Best iter=30, best score=0.691277
+[1/5] Split sizes -> train=(5319642, 12), val=(1139923, 12), test=(1139924, 12)
+      Date ranges -> train[2012-01-03 14:22:00 .. 2022-02-13 19:03:00]  val[2022-02-13 19:04:00 .. 2024-04-15 09:46:00]  test[2024-04-15 09:47:00 .. 2026-06-16 00:30:00]
+[2/5] Best iteration: 30
+[3/5] Test period rows=1,139,924, class balance={0: 571423, 1: 568501}
+
+=== Classification Report (Test) ===
+              precision    recall  f1-score   support
+
+           0     0.5139    0.6618    0.5785    571423
+           1     0.5217    0.3708    0.4335    568501
+
+    accuracy                         0.5167   1139924
+   macro avg     0.5178    0.5163    0.5060   1139924
+weighted avg     0.5178    0.5167    0.5062   1139924
+
+=== Confusion Matrix (Test) ===
+          pred_0  pred_1
+actual_0  378159  193264
+actual_1  357688  210813
+      TN=378,159  FP=193,264  FN=357,688  TP=210,813
+[4/5] Feature importance plot -> D:\New folder (2)\Bitcoin\outputs\lgbm_feature_importance.png
+[5/5] Saved model -> D:\New folder (2)\Bitcoin\outputs\lgbm_model.txt
